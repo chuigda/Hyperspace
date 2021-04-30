@@ -6,8 +6,8 @@
   - 开始设计: `3027.03`
   - 设计定案: `3030.69`
   - 服役: `3094.70`
-  - 衍生自: `Pe1A` 型无人机
-  - 衍生型: `Pe1P-C` 型侦察机，`Pe1P-BD` 型攻击机，`Pe1.5` 型战斗机
+  - 前型: `Pe1A` 型无人机
+  - 改型: `Pe1P-C` 型侦察机，`Pe1P-BD` 型攻击机，`Pe1.5` 型战斗机
 
 ## 技术数据
   - 长度: 8.4m
@@ -44,8 +44,6 @@
 
 ## 衍生型
 
-`Pe1P-C` 型侦察机: 移除 `Clk-12` 机枪、`Pocket-S` 弹仓和 `SnL-Block3-Mk0` 雷达，增加了 `PhotoStore(R) ZeroMask(TM)` 高分照相机。
-
-`Pe1P-BD` 型攻击机: 以 `Blastro-12` 速射炮替换 `Clk-12` 机枪，移除 `Pocket-S` 弹仓和 `SnL-Block3-Mk0` 雷达，增设 2 * `Rocketry-18-Mk0` 火箭巢，增设 `Inf25` 红外成像瞄准吊舱。
-
-`Pe1.5` 型战斗机: 使用更高效的 `Ionizer` 磁等离子工质发动机，增设 `Cover-S3` 小型护盾发生器，增加反应式防御涂层，以 `DC-25` 激光炮替换 `Clk-12` 机枪，改用 `Prasky` 导弹。
+- `Pe1P-C` 型侦察机: 移除 `Clk-12` 机枪、`Pocket-S` 弹仓和 `SnL-Block3-Mk0` 雷达，增加了 `PhotoStore(R) ZeroMask(TM)` 高分照相机。
+- `Pe1P-BD` 型攻击机: 以 `Blastro-12` 速射炮替换 `Clk-12` 机枪，移除 `Pocket-S` 弹仓和 `SnL-Block3-Mk0` 雷达，增设 2 * `Rocketry-18-Mk0` 火箭巢，增设 `Inf25` 红外成像瞄准吊舱。
+- `Pe1.5` 型战斗机: 使用更高效的 `Ionizer` 磁等离子工质发动机，增设 `Cover-S3` 小型护盾发生器，增加反应式防御涂层，以 `DC-25` 激光炮替换 `Clk-12` 机枪，改用 `Prasky` 导弹。
