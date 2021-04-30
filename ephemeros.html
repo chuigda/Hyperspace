@@ -1,0 +1,104 @@
+<html>
+    <meta charset="utf-8">
+    <title>星历 - 公元转换器</title>
+    <head>
+        <script src="http://cdn.staticfile.org/moment.js/2.24.0/moment.min.js"></script>
+        <script>
+
+var startDate = moment('1957-10-04')
+
+function commonEraToStarDate() {
+    var commonEra = document.getElementById('commonEra').value
+    var date = moment(commonEra)
+    var days = Math.ceil(date.diff(startDate, 'h') / 18)
+    var starDate = (days / 100).toFixed(2)
+    document.getElementById('starDate').value = starDate
+
+    var record = document.getElementById('record').innerText
+    document.getElementById('record').innerText = record + commonEra + ' = ' + starDate + '\n'
+}
+
+function starDateToCommonEra() {
+    var starDate = document.getElementById('starDate').value
+    var hours = parseFloat(starDate) * 100 * 18
+    var commonEra = startDate.clone()
+    commonEra.add(hours, 'h')
+    commonEra = commonEra.format('YYYY-MM-DD')
+    document.getElementById('commonEra').value = commonEra
+
+    var record = document.getElementById('record').innerText
+    document.getElementById('record').innerText = record + starDate + ' = ' + commonEra + '\n'
+}
+
+function clearRecord() {
+    document.getElementById('record').innerText = ''
+}
+
+        </script>
+    </head>
+    <body>
+        <div align="center">
+            <h2>星历 - 公元转换器</h2>
+            <form>
+                <table style="border: 1px solid black;">
+                    <tr>
+                        <td><input id="commonEra" type="text"/></td>
+                        <td><input id="submitCommonEra" type="button" onclick="commonEraToStarDate()" value="转为星历"/></td>
+                    </tr>
+                    <tr>
+                        <td><input id="starDate" type="text"/></td>
+                        <td><input id="submitStarDate" type="button" onclick="starDateToCommonEra()" value="转为公元"/></td>
+                    </tr>
+                </table>
+            </form>
+            <hr/>
+            <table style="border: 1px solid black; border-style: solid;">
+                <tr>
+                    <td align="center"> 转换记录 <button id="clearRecord" onclick="clearRecord()">清空</button></td>
+                    <td align="center"> 常用时间表 </td>
+                </tr>
+                <tr>
+                    <td width="500px" style="border: 1px solid black;">
+                        <code id="record"></code>
+                    </td>
+                    <td width="500px" style="border: 1px solid black;">
+                        <code  width="500px"><pre>
+2049-12-14 (448.99)  | 人类利用化学火箭飞出太阳系
+2053-01-04 (463.89)  | 第三次世界大战爆发
+2076-10-15 (579.68)  | 第三次世界大战结束
+2084-01-01 (614.80)  | 太空探索重新开始
+2110-04-28 (742.98)  | 人类利用脉冲推进达到 1/4 光速
+2113-07-14 (758.62)  | 恒星际探索工程启动
+2134-09-23 (861.83)  | 人类到达半人马座三星
+2167-01-03 (1019.03) | 人类首次与其他智慧生命取得联系
+2214-01-03 (1247.91) | 曲率技术实用化
+                       星历启用
+1326.89 (2230-03-23) | 信任危机爆发，第四旋臂星际战争开始
+1392.47 (2243-09-10) | 第四旋臂星际战争结束
+1534.10 (2272-10-09) | 虚拟场效应被发现
+1692.77 (2305-05-10) | 反重力和超空间技术实用化
+                       银河系时代开始
+1823.20 (2332-02-21) | 能源恐慌，银河系内战开始
+2041.65 (2376-12-29) | 银河系内战结束
+2044.30 (2377-07-16) | 银河系公约签订
+                       银河系联邦形成
+2427.50 (2456-03-23) | 猎户悬臂部分星系脱离联邦
+2749.90 (2522-06-06) | 仙女座大星云进行军事入侵
+                       银河系保卫战
+2890.46 (2551-04-17) | 第一次银河系保卫战结束
+2943.77 (2562-03-28) | 银河共和国成立
+2954.20 (2564-05-19) | 多个其他星团加入银河共和国
+                       成立星际共和国
+2987.94 (2571-04-23) | 扩张时代开始
+2993.36 (2572-06-03) | 星际共和国内部不稳定
+3012.50 (2576-05-08) | 司德芬派实际控制星际共和国
+                       星际帝国成立
+3015.00 (2576-11-12) | 星际帝国改名银河帝国
+                        </pre></code>
+                    </td>
+                </tr>
+            </table>
+            </code>
+        </div>
+    </body>
+</html>
